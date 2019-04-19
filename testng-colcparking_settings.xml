@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BVT" thread-count="1" verbose="3">
+<!-- <suite name="BVT" thread-count="1" verbose="3" parallel="classes"> -->
+	<parameter name="remote" value="no" />
+	<test name="Regression">
+		<classes>
+		   	<class name="tests.ColcParking.CPSettings">
+		   		<methods> 
+            	<include name="Verify_add_new_manufacturer" /> 
+        	 	 <include name="Verify_add_new_model" /> 
+        	 	 <include name="Verify_add_new_colour" /> 
+        	 	 <include name="Verify_delete_manufacturer" /> 
+        		 <include name="Verify_delete_model" /> 
+        	 	 <include name="Verify_delete_colour" /> 
+        	 	 
+        	 	 
+        		 <!-- <exclude name="addEmployeeTestCase" /> -->
+       		  </methods> 
+			
+			</class>
+        	
+		</classes>
+ 	</test>
+</suite>

@@ -1,0 +1,18 @@
+<root>
+	<ANPRGlobal>
+		<Browser>chrome</Browser>
+		<URL>https://asa-vn.dallmeier.vn/parking/index.html#!/settings/parking_site</URL>
+		<FullName>Test User Dallmeier1</FullName>
+		<Username>initUser</Username>
+		<Password>initUser</Password>
+		<Author>Nguyen, Vu</Author>
+	</ANPRGlobal>
+
+	<ANPRLocal>
+		<Browser>chrome</Browser>
+		<URL>https://parking2.dallmeier.vn/parking/index.html#!/main</URL>
+		<FullName>Vu Nguyen</FullName>
+		<Username>vu.nguyen</Username>
+		<Password>password</Password>
+	</ANPRLocal>
+</root>

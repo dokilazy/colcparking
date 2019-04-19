@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BVT" thread-count="1" verbose="3">
+<!-- <suite name="BVT" thread-count="4" verbose="3" parallel="classes"> -->
+	<parameter name="remote" value="no" />
+	<test name="Regression">
+		<classes>
+		   	<class name="tests.AIMS.Homepage">
+		   		<methods> 
+            	<include name="Verify_Creation_new_Incidents" /> 
+        	 	 <include name="Verify_Upload_an_image" /> 
+        	 	 <include name="Verify_Export_evidence" /> 
+        	 	 <include name="Verify_Upload_a_video_then_capture_an_image" /> 
+        		 <include name="Verify_upload_file_without_input_metadata" /> 
+        		 <include name="Verify_Exportlog_Content" /> 
+        	 	 <include name="Verify_export_all_evidences_more_than_6_evidences" /> 
+        	 	 <include name="Verify_Export_ExportLog" /> 
+        		 <include name="Verify_Delete_an_evidence" /> 
+        		 <include name="Verify_Update_a_custom_fields" />
+        		 <include name="Verify_Update_metadata_and_discarding_changes" />
+        		 <include name="Verify_Incident_Status" />
+        		 <include name="Verify_Incidence_Coordinates_after_selecting_map" />
+        		 <include name="Verify_LookUp_in_Evidence_dialog"/> 
+        		 <include name="Verify_LookUp_in_Incident_Details"/>
+        		 <include name="Create_two_Incident_continuously"/>
+        		 
+        		 
+        		 <!-- <exclude name="addEmployeeTestCase" /> -->
+       		  </methods> 
+			</class>
+        	<class name="tests.AIMS.Settings">
+        	</class>
+        	
+        	
+		</classes>
+ 	</test>
+</suite>

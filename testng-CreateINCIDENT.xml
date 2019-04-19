@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BVT" thread-count="1" verbose="3" parallel="classes">
+	
+	<parameter name="remote" value="no" />
+	
+	<test name="AIMS">
+ 	
+		<classes>
+		   	<class name="tests.Sandbox.AIMS_test">
+		   		<methods>
+              	<include name="Create_Incidents" />
+        		<!-- <include name="AddIncidentwithEvidence" /> -->
+        		<!-- <exclude name="addEmployeeTestCase" /> -->
+       		 </methods>
+        	</class>
+		</classes>
+ 	</test>
+</suite>
