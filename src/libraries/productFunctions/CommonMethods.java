@@ -1,3 +1,4 @@
+
 package libraries.productFunctions;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.TreeMap;
 import java.io.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-import org.apache.commons.compress.archivers.dump.InvalidFormatException;
+//import org.apache.commons.compress.archivers.dump.InvalidFormatException;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -24,12 +25,10 @@ import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.w3c.dom.Node;
-import org.w3c.dom.Element;
 import libraries.generalFunctions.ExcelReader;
 import libraries.objects.VRMExcel;
 
+//@SuppressWarnings("unused")
 public class CommonMethods {
 	/**
 	 * Read the test data from excel file
@@ -37,13 +36,11 @@ public class CommonMethods {
 	 * @param data
 	 *            The TestData data object
 	 */
-	public void readExcelData(VRMExcel data) {
+	public static void readExcelData(VRMExcel data) {
 		ArrayList<String> exceptionDate = new ArrayList<String>();
 		ArrayList<String> cameraEncoderNumber = new ArrayList<String>();
 		ArrayList<String> cameraSite = new ArrayList<String>();
 		ArrayList<String> vrmNumber = new ArrayList<String>();
-		ArrayList<String> element2 = new ArrayList<String>();
-		ArrayList<String> element3 = new ArrayList<String>();
 
 		// Get the data from excel file
 		for (int rowCnt = 1; rowCnt < ExcelReader.RowCount(); rowCnt++) {
@@ -57,11 +54,10 @@ public class CommonMethods {
 		data.setCameraEncoderNumber(cameraEncoderNumber);
 		data.setCameraSite(cameraSite);
 		data.setVrmNumber(vrmNumber);
-
 	}
 
-	public static void CreateSheet() throws FileNotFoundException, IOException {
-
+	public static void CreateSheet()  {
+        try {
 		// Creating Workbook instances
 		Workbook wb = new HSSFWorkbook();
 
@@ -75,6 +71,8 @@ public class CommonMethods {
 		System.out.println("Sheets Has been Created successfully");
 
 		wb.write(fileOut);
+        }
+        catch (Exception e) {};
 	}
 
 	public static void POIforgfgWrite() {
@@ -126,20 +124,28 @@ public class CommonMethods {
 		}
 	}
 
-	// --- read a file at different location: Here’s how you can do it:
+	// --- read a file at different location: Hereâ€™s how you can do it:
 	private static final String FILE_NAME = "C:\\Users\\pankaj\\Desktop\\projectOutput\\mobilitymodel.xlsx";
 
-	public static void write() throws IOException, InvalidFormatException {
+	
+	//throws FileNotFoundException, IOException
+	public static void write()  {
+		try {
 		InputStream inp = new FileInputStream(FILE_NAME);
 		Workbook wb = WorkbookFactory.create(inp);
 		Sheet sheet = wb.getSheetAt(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	// ----You can append to the existing file using following code:
 	private static final String FILE_NAME2 = "C:\\Users\\pankaj\\Desktop\\projectOutput\\blo.xlsx";
 
-	public static void writeAppend() throws IOException, InvalidFormatException {
+	public static void writeAppend() throws IOException {
 		InputStream inp = new FileInputStream(FILE_NAME);
+		
+		try {
 		Workbook wb = WorkbookFactory.create(inp);
 		Sheet sheet = wb.getSheetAt(0);
 		int num = sheet.getLastRowNum();
@@ -150,6 +156,10 @@ public class CommonMethods {
 		FileOutputStream fileOut = new FileOutputStream(FILE_NAME);
 		wb.write(fileOut);
 		fileOut.close();
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static void unzip(String zipFilePath, String destDir) {
@@ -243,3 +253,4 @@ public class CommonMethods {
 	}
 
 }
+
