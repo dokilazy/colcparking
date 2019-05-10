@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testng-anpr" thread-count="1" verbose="3">
+<!-- <suite name="testng-anpr" thread-count="1" verbose="3" parallel="classes"> -->
+	<parameter name="remote" value="no" />
+	<test name="testng-anpr">
+		<classes>
+		   	<class name="tests.ANPR.DashBoard">
+			</class>
+			<class name="tests.ANPR.Settings">
+			</class>
+		</classes>
+ 	</test>
+</suite>

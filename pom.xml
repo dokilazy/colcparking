@@ -18,7 +18,7 @@
     <id>Mulesoft Repo</id>
     <url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
 	</repository>
-</repositories>
+	</repositories>
 	
 	<build>
 		<sourceDirectory>src</sourceDirectory>
@@ -41,7 +41,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!--	<suiteXmlFile>testng-${testSuite}.xml</suiteXmlFile>  -->
-					<suiteXmlFile>testng-colcparking_settings.xml</suiteXmlFile>
+					<suiteXmlFile>testng-anpr.xml</suiteXmlFile>
 						
 					</suiteXmlFiles>
 					<!-- <skipTests>${skipTests}</skipTests> -->
