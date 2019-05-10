@@ -5,8 +5,8 @@
 	<parameter name="remote" value="no" />
 	<test name="Regression">
 		<classes>
-			<class name="tests.Sandbox.CPTest">
-		   	</class>
+		 	<class name="tests.Sandbox.CPTest"> 
+		   	 </class> 
 		   	<class name="tests.ColcParking.ContraventionDetails">
 		   	</class>
         	<class name="tests.ColcParking.CPSettings">

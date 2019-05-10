@@ -33,7 +33,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!--	<suiteXmlFile>testng-${testSuite}.xml</suiteXmlFile>  -->
-					<!--	<suiteXmlFile>testng-BVT.xml</suiteXmlFile>--> 
+					<suiteXmlFile>testng-colcparking_settings.xml</suiteXmlFile>
 						
 					</suiteXmlFiles>
 					<!-- <skipTests>${skipTests}</skipTests> -->
@@ -41,7 +41,15 @@
 					<!--	<rerunFailingTestsCount>20</rerunFailingTestsCount> -->
 				</configuration>
 			</plugin>
-		</plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+       			<failOnMissingWebXml>false</failOnMissingWebXml>
+    			</configuration>
+			</plugin>
+			</plugins>
 	</build>
 
 	<dependencies>
@@ -78,8 +86,7 @@
 			<version>3.5</version>
 		</dependency>
 
-		<!-- <dependency> <groupId>com.relevantcodes</groupId> <artifactId>extentreports</artifactId> 
-			<version>2.40.1</version> </dependency> -->
+
 		
 		<dependency>
 			<groupId>org.uncommons</groupId>
