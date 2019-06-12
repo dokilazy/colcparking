@@ -7,9 +7,9 @@
 		<classes>
 		 	<class name="tests.Sandbox.CPTest"> 
 		   	 </class> 
-		   <--!	<class name="tests.ColcParking.ContraventionDetails"> -->
+		   <!--	<class name="tests.ColcParking.ContraventionDetails"> -->
 		   	
-        	<--! <class name="tests.ColcParking.CPSettings"> -->
+        	<!-- <class name="tests.ColcParking.CPSettings"> -->
         	
 		</classes>
  	</test>
