@@ -41,7 +41,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!--	<suiteXmlFile>testng-${testSuite}.xml</suiteXmlFile>  -->
-					<suiteXmlFile>testng-anpr.xml</suiteXmlFile>
+					<suiteXmlFile>testng-colcparking.xml</suiteXmlFile>
 						
 					</suiteXmlFiles>
 					<!-- <skipTests>${skipTests}</skipTests> -->
